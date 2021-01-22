@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+@keyframes respiracionAqua {
+  0% {
+    box-shadow: 0 0 40px 15px aqua; }
+  50% {
+    box-shadow: 0 0 40px 10px aqua; }
+  100% {
+    box-shadow: 0 0 40px 15px aqua; } }
+
+@keyframes respiracionRojo {
+  0% {
+    box-shadow: 0 0 40px 15px red; }
+  50% {
+    box-shadow: 0 0 40px 10px red; }
+  100% {
+    box-shadow: 0 0 40px 15px red; } }
+
+.navegacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px;
+  justify-content: start;
+  grid-template-areas: "icono logo none";
+  align-items: center;
+  background-color: black;
+  border-bottom: 2px solid aqua; }
+  .navegacion #menu__check {
+    display: none; }
+  .navegacion #menu__icono {
+    grid-area: icono;
+    width: 30px;
+    margin-left: 8px; }
+    .navegacion #menu__icono:hover {
+      cursor: pointer; }
+  .navegacion a {
+    grid-area: logo;
+    font-size: 25px;
+    text-decoration: none;
+    color: aqua;
+    justify-self: center;
+    font-family: 'Monoton', cursive; }
+
+.encabezado {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+  height: 100vh; }
+  .encabezado .encabezado__contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border: 10px double red;
+    background-color: black;
+    animation-name: respiracionAqua;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    border-radius: 100%;
+    color: white; }
+    .encabezado .encabezado__contenedor #nombre,
+    .encabezado .encabezado__contenedor #apellido {
+      font-size: 100px;
+      display: none; }
+    .encabezado .encabezado__contenedor #logo {
+      font-size: 110px;
+      color: aqua;
+      font-family: 'Monoton', cursive; }
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, black, gray); }
+  .principal .principal__titulo {
+    font-family: 'Alata', sans-serif;
+    color: aqua;
+    font-size: 40px;
+    margin-bottom: 90px;
+    z-index: 99; }
+  .principal .principal__nombre {
+    color: red;
+    margin-bottom: 100px;
+    font-size: 30px;
+    font-family: 'Alata', sans-serif; }
+  .principal .principal__foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 10px double aqua;
+    animation-name: respiracionRojo;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0; }
+
+.principal__descripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 200px;
+  border-radius: 30px;
+  font-family: 'Alata', sans-serif;
+  text-align: center;
+  background-color: #c4fafa;
+  box-shadow: 0 0 10px 5px white; }
