@@ -35,7 +35,7 @@ window.onscroll = function() {
     var str = string.split("");
     console.log(h2.innerHTML);
 
-    if (window.scrollY >= 250 && h2.innerHTML == "") {
+    if (window.scrollY >= 338 && h2.innerHTML == "") {
         (function animate() {
             str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
             var running = setTimeout(animate, 90);

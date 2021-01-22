@@ -111,9 +111,10 @@ $azulNav:#0f1d47;
     }
     .principal__nombre {
         color: $rojo;
-        margin-bottom: 100px;
+        margin-bottom: 20px;
         font-size: 30px;
         font-family: 'Alata', sans-serif;
+        z-index: 98;
     }
     .principal__foto {
         width: 200px;

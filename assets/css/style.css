@@ -87,9 +87,10 @@
     z-index: 99; }
   .principal .principal__nombre {
     color: red;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     font-size: 30px;
-    font-family: 'Alata', sans-serif; }
+    font-family: 'Alata', sans-serif;
+    z-index: 98; }
   .principal .principal__foto {
     width: 200px;
     height: 200px;
