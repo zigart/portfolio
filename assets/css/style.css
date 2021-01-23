@@ -114,34 +114,27 @@
     text-align: center;
     background-color: #c4fafa;
     box-shadow: 0 0 10px 5px white; }
-  .principal .principal__proyectos {
+  .principal .principal__proyecto1 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 80%;
-    height: 300px;
     border-radius: 30px;
-    background-color: #c4fafa;
-    box-shadow: 0 0 10px 5px white;
-    overflow: hidden; }
-    .principal .principal__proyectos #proyecto1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 30px;
-      overflow: hidden;
-      width: 80%;
-      height: 90%; }
-      .principal .principal__proyectos #proyecto1 a {
-        color: red;
-        text-shadow: white 0 -1px 2px;
-        text-decoration: none;
-        font-size: 25px; }
-      .principal .principal__proyectos #proyecto1 #link {
+    overflow: hidden;
+    width: 80%;
+    height: 350px; }
+    .principal .principal__proyecto1 a {
+      color: red;
+      text-decoration: none;
+      font-family: 'Alata', sans-serif;
+      font-size: 28px;
+      letter-spacing: 3px;
+      margin: 20px 0 20px 0; }
+    .principal .principal__proyecto1 #link {
+      width: 100%;
+      height: 80%;
+      border-radius: 50px; }
+      .principal .principal__proyecto1 #link img {
         width: 100%;
-        height: 90%; }
-        .principal .principal__proyectos #proyecto1 #link img {
-          width: 100%;
-          height: 100%;
-          border-radius: 30px; }
+        height: 100%;
+        border-radius: 50px; }
