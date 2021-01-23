@@ -4,11 +4,11 @@
 
 @keyframes respiracionAqua {
   0% {
-    box-shadow: 0 0 40px 15px #9fd5d1; }
+    box-shadow: 0 0 40px 18px aqua; }
   50% {
-    box-shadow: 0 0 40px 10px aqua; }
+    box-shadow: 0 0 40px 10px #9fd5d1; }
   100% {
-    box-shadow: 0 0 40px 15px #9fd5d1; } }
+    box-shadow: 0 0 40px 18px aqua; } }
 
 @keyframes respiracionRojo {
   0% {
@@ -107,12 +107,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
+    width: 80%;
     height: 200px;
     border-radius: 30px;
     font-family: 'Alata', sans-serif;
     text-align: center;
     background-color: #c4fafa;
     box-shadow: 0 0 10px 5px white; }
-  .principal .principal__nombre--proyectos {
-    letter-spacing: 3px; }
+  .principal .principal__proyectos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #c4fafa;
+    box-shadow: 0 0 10px 5px white;
+    overflow: hidden; }
+    .principal .principal__proyectos #proyecto1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      overflow: hidden;
+      width: 80%;
+      height: 90%; }
+      .principal .principal__proyectos #proyecto1 a {
+        color: red;
+        text-shadow: white 0 -1px 2px;
+        text-decoration: none;
+        font-size: 25px; }
+      .principal .principal__proyectos #proyecto1 #link {
+        width: 100%;
+        height: 90%; }
+        .principal .principal__proyectos #proyecto1 #link img {
+          width: 100%;
+          height: 100%;
+          border-radius: 30px; }

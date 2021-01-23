@@ -30,18 +30,35 @@ menuCheck.addEventListener('click', () => {
 
 
 window.onscroll = function() {
+
     var h2 = document.getElementById("sobreMi");
     var string = "Agustín Zigart";
     var str = string.split("");
     console.log(h2.innerHTML);
+
+
 
     if (window.scrollY >= 338 && h2.innerHTML == "") {
         (function animate() {
             str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
             var running = setTimeout(animate, 90);
         })();
-
     }
+
+
+    var proyectos = document.getElementById("proyectos");
+    var string2 = "Proyectos";
+    var str2 = string2.split("");
+    console.log(proyectos.innerHTML);
+
+    if (window.scrollY >= 1189 && proyectos.innerHTML == "") {
+        (function animate2() {
+            str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
+            var running = setTimeout(animate2, 90);
+        })();
+    }
+
+
     console.log("Vertical: " + window.scrollY);
 
 
