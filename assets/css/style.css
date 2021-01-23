@@ -4,11 +4,11 @@
 
 @keyframes respiracionAqua {
   0% {
-    box-shadow: 0 0 40px 15px aqua; }
+    box-shadow: 0 0 40px 15px #9fd5d1; }
   50% {
     box-shadow: 0 0 40px 10px aqua; }
   100% {
-    box-shadow: 0 0 40px 15px aqua; } }
+    box-shadow: 0 0 40px 15px #9fd5d1; } }
 
 @keyframes respiracionRojo {
   0% {
@@ -46,7 +46,7 @@
 .encabezado {
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: #1f1e1c;
   width: 100%;
   height: 100vh; }
   .encabezado .encabezado__contenedor {
@@ -78,17 +78,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom, black, gray); }
+  background: linear-gradient(to bottom, #1f1e1c, #4d4d4d); }
   .principal .principal__titulo {
     font-family: 'Alata', sans-serif;
     color: aqua;
     font-size: 40px;
+    letter-spacing: 3px;
     margin-bottom: 90px;
     z-index: 99; }
   .principal .principal__nombre {
     color: red;
     margin-bottom: 20px;
     font-size: 30px;
+    letter-spacing: 3px;
     font-family: 'Alata', sans-serif;
     z-index: 98; }
   .principal .principal__foto {
@@ -101,15 +103,16 @@
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
     animation-delay: 0; }
-
-.principal__descripcion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 200px;
-  border-radius: 30px;
-  font-family: 'Alata', sans-serif;
-  text-align: center;
-  background-color: #c4fafa;
-  box-shadow: 0 0 10px 5px white; }
+  .principal .principal__descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 200px;
+    border-radius: 30px;
+    font-family: 'Alata', sans-serif;
+    text-align: center;
+    background-color: #c4fafa;
+    box-shadow: 0 0 10px 5px white; }
+  .principal .principal__nombre--proyectos {
+    letter-spacing: 3px; }
