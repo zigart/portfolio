@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Alata', sans-serif;
 }
 
 $rojo: red;
@@ -203,6 +204,31 @@ $azulNav:#0f1d47;
         }
         .git {
             grid-area: "git";
+        }
+    }
+    .contenedor__contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 85%;
+        border-radius: 30px;
+        background-color: rgb(255, 88, 88);
+        a {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 30px;
+                height: auto;
+                margin: 10px;
+            }
+            p {
+                color: white;
+                font-size: 17px;
+            }
         }
     }
 }
