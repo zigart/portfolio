@@ -74,3 +74,12 @@ window.onscroll = function() {
 
 
 };
+
+var botonVuelta = document.getElementById("boton");
+
+botonVuelta.addEventListener("click", () => {
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
+})
