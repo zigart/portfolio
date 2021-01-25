@@ -114,7 +114,7 @@
     text-align: center;
     background-color: #c4fafa;
     box-shadow: 0 0 10px 5px white; }
-  .principal .principal__proyecto1 {
+  .principal .principal__proyecto {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -123,18 +123,46 @@
     overflow: hidden;
     width: 80%;
     height: 350px; }
-    .principal .principal__proyecto1 a {
+    .principal .principal__proyecto a {
       color: red;
       text-decoration: none;
       font-family: 'Alata', sans-serif;
       font-size: 28px;
       letter-spacing: 3px;
       margin: 20px 0 20px 0; }
-    .principal .principal__proyecto1 #link {
+    .principal .principal__proyecto #link {
       width: 100%;
       height: 80%;
       border-radius: 50px; }
-      .principal .principal__proyecto1 #link img {
+      .principal .principal__proyecto #link img {
         width: 100%;
         height: 100%;
         border-radius: 50px; }
+  .principal .principal__tecnologias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "html css js" "bootstrap sass git";
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    height: 400px;
+    border-radius: 30px;
+    background-color: #c4fafa;
+    box-shadow: 0 0 10px 5px white; }
+    .principal .principal__tecnologias img {
+      width: 70px;
+      height: auto; }
+    .principal .principal__tecnologias .html {
+      grid-area: "html"; }
+    .principal .principal__tecnologias .css {
+      grid-area: "css"; }
+    .principal .principal__tecnologias .js {
+      grid-area: "js"; }
+    .principal .principal__tecnologias .bootstrap {
+      grid-area: "bootstrap";
+      width: 95px; }
+    .principal .principal__tecnologias .sass {
+      grid-area: "sass"; }
+    .principal .principal__tecnologias .git {
+      grid-area: "git"; }

@@ -59,6 +59,17 @@ window.onscroll = function() {
     }
 
 
+    var tecnologias = document.getElementById("habilidades");
+    var string3 = "Habilidades";
+    var str3 = string3.split("");
+
+    if (window.scrollY >= 1189 && tecnologias.innerHTML == "") {
+        (function animate3() {
+            str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
+            var running = setTimeout(animate3, 90);
+        })();
+    }
+
     console.log("Vertical: " + window.scrollY);
 
 
