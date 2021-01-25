@@ -174,7 +174,8 @@
     align-items: start;
     width: 85%;
     border-radius: 30px;
-    background-color: #ff5858; }
+    background-color: #ff5858;
+    box-shadow: 0 0 10px 5px white; }
     .principal .contenedor__contacto a {
       display: flex;
       flex-direction: row;
