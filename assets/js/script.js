@@ -157,7 +157,7 @@ window.onscroll = function() {
 
     var contacto = document.getElementById("contacto");
     var string4 = "Contactame";
-    var str4 = string3.split("");
+    var str4 = string4.split("");
 
     if (window.scrollY >= 4031 && contacto.innerHTML == "") {
         (function animate4() {
