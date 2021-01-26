@@ -8,12 +8,22 @@ var menu = document.getElementById("menu");
 function desplegar() {
 
     menu.style.display = "block";
+    menu.style.zIndex = "100";
+    menu.style.animation = "menuAnimacion 1s 1";
     console.log('aca va la funcion');
+
+
 
 }
 
 function esconder() {
-    menu.style.display = "none";
+
+    menu.style.animation = "menu2 1s 1";
+    setTimeout(() => {
+        menu.style.display = "none";
+    }, 1000);
+
+
     console.log("aca se esconde");
 }
 
@@ -25,6 +35,11 @@ menuCheck.addEventListener('click', () => {
     } else {
         esconder();
     }
+
+
+
+
+
 })
 
 
