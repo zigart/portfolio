@@ -4,6 +4,10 @@
 var menuCheck = document.querySelector("#menu__check");
 var color = document.querySelector("a");
 var menu = document.getElementById("menu");
+var quienSoy = document.getElementById("quienSoyMenu");
+var proyectos = document.getElementById("proyectosMenu");
+var habilidades = document.getElementById("habilidadesMenu");
+var contacto = document.getElementById("contactoMenu");
 
 function desplegar() {
 
@@ -27,6 +31,7 @@ function esconder() {
     console.log("aca se esconde");
 }
 
+//Despliegue y repliegue del menu
 
 menuCheck.addEventListener('click', () => {
     if (menuCheck.checked == true) {
@@ -35,13 +40,51 @@ menuCheck.addEventListener('click', () => {
     } else {
         esconder();
     }
+});
 
-
-
-
+quienSoy.addEventListener('click', () => {
+    esconder();
+    setTimeout(() => {
+        window.scroll({
+            top: 763,
+            behavior: "smooth"
+        });
+    }, 1000);
 
 })
 
+proyectos.addEventListener('click', () => {
+    esconder();
+    setTimeout(() => {
+        window.scroll({
+            top: 1693,
+            behavior: "smooth"
+        });
+    }, 1000);
+
+})
+
+habilidades.addEventListener('click', () => {
+    esconder();
+    setTimeout(() => {
+        window.scroll({
+            top: 3612,
+            behavior: "smooth"
+        });
+    }, 1000);
+
+})
+
+contacto.addEventListener('click', () => {
+    esconder();
+    setTimeout(() => {
+        window.scroll({
+            top: 4431,
+            behavior: "smooth"
+        });
+    }, 1000);
+
+})
 
 
 
