@@ -8,10 +8,13 @@ var quienSoy = document.getElementById("quienSoyMenu");
 var proyectos = document.getElementById("proyectosMenu");
 var habilidades = document.getElementById("habilidadesMenu");
 var contacto = document.getElementById("contactoMenu");
+var encabezado = document.getElementById("encabezado");
 
 
 function desactivarScroll() {
-    window.scrollTo(0, 0);
+    window.scroll({
+        top: 0
+    })
 }
 
 function desplegar() {
@@ -20,17 +23,22 @@ function desplegar() {
     navegacion.style.top = "0";
     navegacion.style.width = "100%";
 
+    encabezado.style.marginTop = "52px";
+
     menu.style.width = "100vw";
     menu.style.height = "100vh";
     menu.style.display = "block";
     menu.style.zIndex = "100";
     menu.style.animation = "menuAnimacion 1s 1";
+    menuCheck.checked = true;
     menuCheck.disabled = true;
     setTimeout(() => {
         menuCheck.disabled = false;
 
     }, 1000)
-    console.log('aca va la funcion');
+
+
+
 
 
 
@@ -40,6 +48,8 @@ function esconder() {
     window.removeEventListener('scroll', desactivarScroll);
     navegacion.style.position = "relative";
     menu.style.animation = "menu2 1s 1";
+    encabezado.style.marginTop = "0px";
+    menuCheck.checked = false;
     menuCheck.disabled = true;
     setTimeout(() => {
         menuCheck.disabled = false;
@@ -54,29 +64,28 @@ menuCheck.addEventListener('click', () => {
     if (menuCheck.checked == true) {
         console.log("falta la funcion");
         desplegar();
-    } else {
+    } else if (menuCheck.checked == false && menu.style.display == "block") {
         esconder();
     }
 });
 
+
+
 quienSoy.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        window.scroll({
-            top: 763,
+        document.querySelector("#sobreMi").scrollIntoView({
             behavior: "smooth"
-        });
+        })
     }, 1000);
-
 })
 
 proyectos.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        window.scroll({
-            top: 1693,
+        document.querySelector("#proyectos").scrollIntoView({
             behavior: "smooth"
-        });
+        })
     }, 1000);
 
 })
@@ -84,10 +93,9 @@ proyectos.addEventListener('click', () => {
 habilidades.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        window.scroll({
-            top: 3612,
+        document.querySelector("#habilidades").scrollIntoView({
             behavior: "smooth"
-        });
+        })
     }, 1000);
 
 })
@@ -95,10 +103,9 @@ habilidades.addEventListener('click', () => {
 contacto.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        window.scroll({
-            top: 4431,
+        document.querySelector("#contacto").scrollIntoView({
             behavior: "smooth"
-        });
+        })
     }, 1000);
 
 })
@@ -145,6 +152,17 @@ window.onscroll = function() {
         (function animate3() {
             str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
             var running = setTimeout(animate3, 90);
+        })();
+    }
+
+    var contacto = document.getElementById("contacto");
+    var string4 = "Contactame";
+    var str4 = string3.split("");
+
+    if (window.scrollY >= 4031 && contacto.innerHTML == "") {
+        (function animate4() {
+            str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
+            var running = setTimeout(animate4, 90);
         })();
     }
 
