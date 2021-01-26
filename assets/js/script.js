@@ -14,6 +14,11 @@ function desplegar() {
     menu.style.display = "block";
     menu.style.zIndex = "100";
     menu.style.animation = "menuAnimacion 1s 1";
+    menuCheck.disabled = true;
+    setTimeout(() => {
+        menuCheck.disabled = false;
+
+    }, 1000)
     console.log('aca va la funcion');
 
 
@@ -23,10 +28,11 @@ function desplegar() {
 function esconder() {
 
     menu.style.animation = "menu2 1s 1";
+    menuCheck.disabled = true;
     setTimeout(() => {
+        menuCheck.disabled = false;
         menu.style.display = "none";
     }, 1000);
-
 
     console.log("aca se esconde");
 }
@@ -36,6 +42,7 @@ function esconder() {
 menuCheck.addEventListener('click', () => {
     if (menuCheck.checked == true) {
         console.log("falta la funcion");
+
         desplegar();
     } else {
         esconder();
