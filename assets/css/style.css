@@ -128,15 +128,13 @@
     color: aqua;
     font-size: 40px;
     letter-spacing: 3px;
-    margin-bottom: 90px;
-    z-index: 99; }
+    margin-bottom: 90px; }
   .principal .principal__nombre {
     color: red;
     margin-bottom: 20px;
     font-size: 30px;
     letter-spacing: 3px;
-    font-family: 'Alata', sans-serif;
-    z-index: 98; }
+    font-family: 'Alata', sans-serif; }
   .principal .principal__foto {
     width: 200px;
     height: 200px;

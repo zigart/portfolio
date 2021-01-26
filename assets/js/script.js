@@ -1,6 +1,6 @@
 'use strict'
 
-
+var navegacion = document.querySelector(".navegacion");
 var menuCheck = document.querySelector("#menu__check");
 var color = document.querySelector("a");
 var menu = document.getElementById("menu");
@@ -9,8 +9,19 @@ var proyectos = document.getElementById("proyectosMenu");
 var habilidades = document.getElementById("habilidadesMenu");
 var contacto = document.getElementById("contactoMenu");
 
-function desplegar() {
 
+function desactivarScroll() {
+    window.scrollTo(0, 0);
+}
+
+function desplegar() {
+    window.addEventListener('scroll', desactivarScroll);
+    navegacion.style.position = "fixed";
+    navegacion.style.top = "0";
+    navegacion.style.width = "100%";
+
+    menu.style.width = "100vw";
+    menu.style.height = "100vh";
     menu.style.display = "block";
     menu.style.zIndex = "100";
     menu.style.animation = "menuAnimacion 1s 1";
@@ -26,14 +37,14 @@ function desplegar() {
 }
 
 function esconder() {
-
+    window.removeEventListener('scroll', desactivarScroll);
+    navegacion.style.position = "relative";
     menu.style.animation = "menu2 1s 1";
     menuCheck.disabled = true;
     setTimeout(() => {
         menuCheck.disabled = false;
         menu.style.display = "none";
     }, 1000);
-
     console.log("aca se esconde");
 }
 
@@ -42,7 +53,6 @@ function esconder() {
 menuCheck.addEventListener('click', () => {
     if (menuCheck.checked == true) {
         console.log("falta la funcion");
-
         desplegar();
     } else {
         esconder();
