@@ -3,14 +3,17 @@
 
 var menuCheck = document.querySelector("#menu__check");
 var color = document.querySelector("a");
+var menu = document.getElementById("menu");
 
 function desplegar() {
 
+    menu.style.display = "block";
     console.log('aca va la funcion');
 
 }
 
 function esconder() {
+    menu.style.display = "none";
     console.log("aca se esconde");
 }
 

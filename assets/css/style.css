@@ -43,6 +43,8 @@
     color: aqua;
     justify-self: center;
     font-family: 'Monoton', cursive; }
+  .navegacion .menu {
+    display: none; }
 
 .encabezado {
   display: flex;
