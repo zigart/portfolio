@@ -23,8 +23,6 @@ function desplegar() {
     navegacion.style.position = "fixed";
     navegacion.style.top = "0";
 
-    encabezado.style.marginTop = "52px";
-
     menu.style.width = "100vw";
     menu.style.height = "100vh";
     menu.style.display = "block";
@@ -32,6 +30,10 @@ function desplegar() {
     menu.style.animation = "menuAnimacion 1s 1";
     menuCheck.checked = true;
     menuCheck.disabled = true;
+
+
+
+
 
     setTimeout(() => {
         menuCheck.disabled = false;
@@ -41,7 +43,8 @@ function desplegar() {
 function esconder() {
     body.style.overflowY = "visible";
     menu.style.animation = "menu2 1s 1";
-    encabezado.style.marginTop = "0px";
+
+
     menuCheck.checked = false;
     menuCheck.disabled = true;
     setTimeout(() => {
@@ -50,6 +53,9 @@ function esconder() {
     }, 1000);
     console.log("aca se esconde");
 }
+
+
+
 
 //Despliegue y repliegue del menu
 
@@ -61,6 +67,7 @@ menuCheck.addEventListener('click', () => {
         esconder();
     }
 });
+
 
 
 
