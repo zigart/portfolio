@@ -1,316 +1,381 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Alata', sans-serif;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-$rojo: red;
-$aqua: aqua;
-$naranja:#c2932dff;
-$azulNav:#0f1d47;
-//animacion 
-@keyframes respiracionAqua {
-    0% {
-        box-shadow: 0 0 40px 18px $aqua;
-    }
-    50% {
-        box-shadow: 0 0 40px 10px #9fd5d1;
-    }
-    100% {
-        box-shadow: 0 0 40px 18px $aqua;
-    }
-}
-
-@keyframes respiracionRojo {
-    0% {
-        box-shadow: 0 0 40px 15px $rojo;
-    }
-    50% {
-        box-shadow: 0 0 40px 10px $rojo;
-    }
-    100% {
-        box-shadow: 0 0 40px 15px $rojo;
-    }
-}
-
-.navegacion {
-    display: grid;
-    position: fixed;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px;
-    justify-content: start;
-    grid-template-areas: "icono logo none";
-    align-items: center;
-    background-color: black;
-    border-bottom: 2px solid $aqua;
-    #menu__check {
-        display: none;
-    }
-    #menu__icono {
-        grid-area: icono;
-        width: 30px;
-        margin-left: 8px;
-        &:hover {
-            cursor: pointer;
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Alata', sans-serif;
         }
-    }
-    #logoNav {
-        grid-area: logo;
-        font-size: 25px;
-        text-decoration: none;
-        color: aqua;
-        justify-self: center;
-        font-family: 'Monoton', cursive;
-    }
-    .menu {
-        @keyframes menuAnimacion {
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        $rojo: red;
+        $aqua: aqua;
+        $naranja:#c2932dff;
+        $azulNav:#0f1d47;
+        //animacion 
+        @keyframes respiracionAqua {
             0% {
-                -webkit-clip-path: circle(0% at 0% 0%);
-                clip-path: circle(0% at 0% 0%);
+                box-shadow: 0 0 40px 18px $aqua;
+            }
+            50% {
+                box-shadow: 0 0 40px 10px #9fd5d1;
             }
             100% {
-                -webkit-clip-path: circle(150% at 0% 0%);
-                clip-path: circle(150% at 0% 0%);
+                box-shadow: 0 0 40px 18px $aqua;
             }
         }
-        @keyframes menu2 {
+        
+        @keyframes respiracionRojo {
             0% {
-                -webkit-clip-path: circle(150% at 0% 0%);
-                clip-path: circle(150% at 0% 0%);
+                box-shadow: 0 0 40px 15px $rojo;
+            }
+            50% {
+                box-shadow: 0 0 40px 10px $rojo;
             }
             100% {
-                -webkit-clip-path: circle(0% at 0% 0%);
-                clip-path: circle(0% at 0% 0%);
+                box-shadow: 0 0 40px 15px $rojo;
             }
         }
-        background: rgb(0, 255, 255);
-        background: -moz-linear-gradient(158deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
-        background: -webkit-linear-gradient(158deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
-        background: linear-gradient(158deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 50px;
-        display: none;
-        ul {
-            display: flex;
-            flex-direction: column;
+        
+        .navegacion {
+            display: grid;
+            position: fixed;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px;
+            justify-content: start;
+            grid-template-areas: "icono logo none";
             align-items: center;
-            justify-content: center;
-            border-top: 1px solid $aqua;
-            li {
-                font-family: 'Alata', sans-serif;
-                list-style: none;
+            background-color: black;
+            border-bottom: 2px solid $aqua;
+            #menu__check {
+                display: none;
+            }
+            #menu__icono {
+                grid-area: icono;
+                width: 30px;
+                margin-left: 8px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            #logoNav {
+                grid-area: logo;
+                font-size: 25px;
+                text-decoration: none;
+                color: aqua;
+                justify-self: center;
+                font-family: 'Monoton', cursive;
+            }
+            .menu {
+                @keyframes menuAnimacion {
+                    0% {
+                        -webkit-clip-path: circle(0% at 0% 0%);
+                        clip-path: circle(0% at 0% 0%);
+                    }
+                    100% {
+                        -webkit-clip-path: circle(150% at 0% 0%);
+                        clip-path: circle(150% at 0% 0%);
+                    }
+                }
+                @keyframes menu2 {
+                    0% {
+                        -webkit-clip-path: circle(150% at 0% 0%);
+                        clip-path: circle(150% at 0% 0%);
+                    }
+                    100% {
+                        -webkit-clip-path: circle(0% at 0% 0%);
+                        clip-path: circle(0% at 0% 0%);
+                    }
+                }
+                background: rgb(0, 255, 255);
+                background: -moz-linear-gradient(158deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
+                background: -webkit-linear-gradient(158deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
+                background: linear-gradient(158deg, rgba(0, 255, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
+                height: 100%;
                 width: 100%;
-                margin: 40px 0 40px 0;
-                text-align: center;
-                a {
-                    font-size: 30px;
-                    text-decoration: none;
-                    color: black;
+                position: absolute;
+                left: 0;
+                top: 50px;
+                display: none;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: 1px solid $aqua;
+                    li {
+                        font-family: 'Alata', sans-serif;
+                        list-style: none;
+                        width: 100%;
+                        margin: 40px 0 40px 0;
+                        text-align: center;
+                        a {
+                            font-size: 30px;
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
                 }
             }
         }
-    }
-}
-
-.encabezado {
-    display: flex;
-    justify-content: center;
-    background-color: #1f1e1c;
-    width: 100%;
-    height: 100vh;
-    .encabezado__contenedor {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        width: 200px;
-        height: 200px;
-        border: 10px double $rojo;
-        background-color: black;
-        animation-name: respiracionAqua;
-        animation-iteration-count: infinite;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
-        animation-delay: 0;
-        border-radius: 100%;
-        color: white;
-        #nombre,
-        #apellido {
-            font-size: 100px;
-            display: none;
-        }
-        #logo {
-            font-size: 110px;
-            color: $aqua;
-            font-family: 'Monoton', cursive;
-        }
-    }
-}
-
-.principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(to bottom, #1f1e1c, rgb(77, 77, 77));
-    .principal__titulo {
-        font-family: 'Alata', sans-serif;
-        color: $aqua;
-        font-size: 40px;
-        letter-spacing: 3px;
-        margin-bottom: 90px;
-    }
-    .principal__nombre {
-        color: $rojo;
-        margin-bottom: 20px;
-        font-size: 30px;
-        letter-spacing: 3px;
-        font-family: 'Alata', sans-serif;
-    }
-    .principal__foto {
-        width: 200px;
-        height: 200px;
-        border-radius: 100%;
-        border: 10px double $aqua;
-        animation-name: respiracionRojo;
-        animation-iteration-count: infinite;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
-        animation-delay: 0;
-    }
-    .principal__descripcion {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 200px;
-        border-radius: 30px;
-        font-family: 'Alata', sans-serif;
-        text-align: center;
-        background-color: rgb(196, 250, 250);
-        box-shadow: 0 0 10px 5px white;
-    }
-    .principal__proyecto {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        border-radius: 30px;
-        overflow: hidden;
-        width: 80%;
-        height: 350px;
-        a {
-            color: $rojo;
-            text-decoration: none;
-            font-family: 'Alata', sans-serif;
-            font-size: 28px;
-            letter-spacing: 3px;
-            margin: 20px 0 20px 0;
-        }
-        #link {
-            width: 100%;
-            height: 80%;
-            border-radius: 50px;
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 50px;
-            }
-        }
-    }
-    .principal__tecnologias {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "html css js" "bootstrap sass git";
-        justify-items: center;
-        align-items: center;
-        width: 90%;
-        height: 400px;
-        border-radius: 30px;
-        background-color: rgb(196, 250, 250);
-        box-shadow: 0 0 10px 5px white;
-        img {
-            width: 70px;
-            height: auto;
-        }
-        .html {
-            grid-area: "html";
-        }
-        .css {
-            grid-area: "css";
-        }
-        .js {
-            grid-area: "js";
-        }
-        .bootstrap {
-            grid-area: "bootstrap";
-            width: 95px;
-        }
-        .sass {
-            grid-area: "sass";
-        }
-        .git {
-            grid-area: "git";
-        }
-    }
-    .contenedor__contacto {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        width: 85%;
-        border-radius: 30px;
-        background-color: rgb(196, 250, 250);
-        box-shadow: 0 0 10px 5px white;
-        a {
+        
+        .encabezado {
             display: flex;
-            flex-direction: row;
-            text-decoration: none;
-            align-items: center;
             justify-content: center;
-            img {
-                width: 30px;
-                height: auto;
-                margin: 10px;
-            }
-            p {
-                color: black;
-                font-size: 17px;
+            background-color: #1f1e1c;
+            width: 100%;
+            height: 100vh;
+            .encabezado__contenedor {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                border: 10px double $rojo;
+                background-color: black;
+                animation-name: respiracionAqua;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0;
+                border-radius: 100%;
+                color: white;
+                #nombre,
+                #apellido {
+                    font-size: 100px;
+                    display: none;
+                }
+                #logo {
+                    color: $aqua;
+                    font-family: 'Monoton', cursive;
+                }
             }
         }
-    }
-    #boton {
-        margin: 100px;
-        width: 100px;
-        height: 100px;
-        background-color: black;
-        border: 5px double $rojo;
-        border-radius: 100%;
-        animation-name: respiracionAqua;
-        animation-iteration-count: infinite;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
-        animation-delay: 0;
-        img {
-            width: 40px;
-            height: 40px;
+        
+        .principal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to bottom, #1f1e1c, rgb(77, 77, 77));
+            .principal__titulo {
+                font-family: 'Alata', sans-serif;
+                color: $aqua;
+                font-size: 40px;
+                letter-spacing: 3px;
+                margin-bottom: 90px;
+            }
+            .principal__nombre {
+                color: $rojo;
+                margin-bottom: 20px;
+                font-size: 30px;
+                letter-spacing: 3px;
+                font-family: 'Alata', sans-serif;
+            }
+            .principal__foto {
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+                border: 10px double $aqua;
+                animation-name: respiracionRojo;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0;
+            }
+            .principal__descripcion {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                height: 200px;
+                border-radius: 30px;
+                font-family: 'Alata', sans-serif;
+                text-align: center;
+                background-color: rgb(196, 250, 250);
+                box-shadow: 0 0 10px 5px white;
+            }
+            .principal__proyecto {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                border-radius: 30px;
+                overflow: hidden;
+                width: 80%;
+                height: 350px;
+                a {
+                    color: $rojo;
+                    text-decoration: none;
+                    font-family: 'Alata', sans-serif;
+                    font-size: 28px;
+                    letter-spacing: 3px;
+                    margin: 20px 0 20px 0;
+                }
+                #link {
+                    width: 100%;
+                    height: 80%;
+                    border-radius: 50px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50px;
+                    }
+                }
+            }
+            .principal__tecnologias {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: "html css js" "bootstrap sass git";
+                justify-items: center;
+                align-items: center;
+                width: 90%;
+                height: 400px;
+                border-radius: 30px;
+                background-color: rgb(196, 250, 250);
+                box-shadow: 0 0 10px 5px white;
+                img {
+                    width: 70px;
+                    height: auto;
+                }
+                .html {
+                    grid-area: "html";
+                }
+                .css {
+                    grid-area: "css";
+                }
+                .js {
+                    grid-area: "js";
+                }
+                .bootstrap {
+                    grid-area: "bootstrap";
+                    width: 95px;
+                }
+                .sass {
+                    grid-area: "sass";
+                }
+                .git {
+                    grid-area: "git";
+                }
+            }
+            .contenedor__contacto {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                width: 85%;
+                border-radius: 30px;
+                background-color: rgb(196, 250, 250);
+                box-shadow: 0 0 10px 5px white;
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    text-decoration: none;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 30px;
+                        height: auto;
+                        margin: 10px;
+                    }
+                    p {
+                        color: black;
+                        font-size: 17px;
+                    }
+                }
+            }
+            #boton {
+                margin: 100px;
+                width: 100px;
+                height: 100px;
+                background-color: black;
+                border: 5px double $rojo;
+                border-radius: 100%;
+                animation-name: respiracionAqua;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0;
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
         }
-    }
-}
-
-.footer {
-    width: 100%;
-    height: 20px;
-    font-size: 12px;
-    background-color: black;
-    color: gray;
-    text-align: center;
-}
+        
+        .footer {
+            width: 100%;
+            height: 20px;
+            font-size: 12px;
+            background-color: black;
+            color: gray;
+            text-align: center;
+        }
+        
+        @media (max-width: 575px) {
+            .encabezado__contenedor {
+                width: 200px;
+                height: 200px;
+                #logo {
+                    font-size: 110px;
+                }
+            }
+        }
+        
+        @media (min-width: 575px) {
+            .encabezado__contenedor {
+                width: 220px;
+                height: 220px;
+                #logo {
+                    font-size: 130px;
+                }
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .navegacion {
+                grid-template-columns: 0.3fr 1fr;
+                grid-template-areas: "logo  menuEscritorio";
+                #logoNav {
+                    justify-self: start;
+                    margin-left: 20px;
+                }
+                .navegacion__icono,
+                .menu {
+                    display: none;
+                }
+                .menu__desktop {
+                    display: flex;
+                    flex-direction: row;
+                    grid-area: menuEscritorio;
+                    justify-self: end;
+                    a {
+                        color: aqua;
+                        text-decoration: none;
+                        margin: 0 15px 0 15px;
+                    }
+                }
+            }
+            .encabezado__contenedor {
+                width: 250px;
+                height: 250px;
+                #logo {
+                    font-size: 150px;
+                }
+                &:hover {
+                    display: flex;
+                    flex-direction: column;
+                    #logo {
+                        display: none;
+                    }
+                    #nombre {
+                        display: block;
+                    }
+                    #apellido {
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+        @media (min-width: 992px) {}

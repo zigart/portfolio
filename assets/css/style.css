@@ -103,8 +103,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 200px;
-    height: 200px;
     border: 10px double red;
     background-color: black;
     animation-name: respiracionAqua;
@@ -119,7 +117,6 @@ body {
       font-size: 100px;
       display: none; }
     .encabezado .encabezado__contenedor #logo {
-      font-size: 110px;
       color: aqua;
       font-family: 'Monoton', cursive; }
 
@@ -258,3 +255,51 @@ body {
   background-color: black;
   color: gray;
   text-align: center; }
+
+@media (max-width: 575px) {
+  .encabezado__contenedor {
+    width: 200px;
+    height: 200px; }
+    .encabezado__contenedor #logo {
+      font-size: 110px; } }
+
+@media (min-width: 575px) {
+  .encabezado__contenedor {
+    width: 220px;
+    height: 220px; }
+    .encabezado__contenedor #logo {
+      font-size: 130px; } }
+
+@media (min-width: 768px) {
+  .navegacion {
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-areas: "logo  menuEscritorio"; }
+    .navegacion #logoNav {
+      justify-self: start;
+      margin-left: 20px; }
+    .navegacion .navegacion__icono,
+    .navegacion .menu {
+      display: none; }
+    .navegacion .menu__desktop {
+      display: flex;
+      flex-direction: row;
+      grid-area: menuEscritorio;
+      justify-self: end; }
+      .navegacion .menu__desktop a {
+        color: aqua;
+        text-decoration: none;
+        margin: 0 15px 0 15px; }
+  .encabezado__contenedor {
+    width: 250px;
+    height: 250px; }
+    .encabezado__contenedor #logo {
+      font-size: 150px; }
+    .encabezado__contenedor:hover {
+      display: flex;
+      flex-direction: column; }
+      .encabezado__contenedor:hover #logo {
+        display: none; }
+      .encabezado__contenedor:hover #nombre {
+        display: block; }
+      .encabezado__contenedor:hover #apellido {
+        display: block; } }

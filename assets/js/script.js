@@ -11,14 +11,14 @@ var contacto = document.getElementById("contactoMenu");
 var encabezado = document.getElementById("encabezado");
 var body = document.querySelector("body");
 
-var scrollY = window.scrollY
+
 
 
 //Despliegue del menu, con timer para que se ejecute la animacion
 
 function desplegar() {
 
-    body.style.overflowY = "none";
+    body.style.overflowY = "hidden";
 
     navegacion.style.position = "fixed";
     navegacion.style.top = "0";
@@ -39,6 +39,7 @@ function desplegar() {
 }
 
 function esconder() {
+    body.style.overflowY = "visible";
     menu.style.animation = "menu2 1s 1";
     encabezado.style.marginTop = "0px";
     menuCheck.checked = false;
@@ -98,10 +99,6 @@ contacto.addEventListener('click', () => {
         })
     }, 1000);
 })
-
-
-
-
 
 window.onscroll = function() {
     var h2 = document.getElementById("sobreMi");
