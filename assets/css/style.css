@@ -24,6 +24,8 @@ body {
 
 .navegacion {
   display: grid;
+  position: fixed;
+  width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 50px;
   justify-content: start;

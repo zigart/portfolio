@@ -9,19 +9,19 @@ var proyectos = document.getElementById("proyectosMenu");
 var habilidades = document.getElementById("habilidadesMenu");
 var contacto = document.getElementById("contactoMenu");
 var encabezado = document.getElementById("encabezado");
+var body = document.querySelector("body");
+
+var scrollY = window.scrollY
 
 
-function desactivarScroll() {
-    window.scroll({
-        top: 0
-    })
-}
+//Despliegue del menu, con timer para que se ejecute la animacion
 
 function desplegar() {
-    window.addEventListener('scroll', desactivarScroll);
+
+    body.style.overflowY = "none";
+
     navegacion.style.position = "fixed";
     navegacion.style.top = "0";
-    navegacion.style.width = "100%";
 
     encabezado.style.marginTop = "52px";
 
@@ -32,21 +32,13 @@ function desplegar() {
     menu.style.animation = "menuAnimacion 1s 1";
     menuCheck.checked = true;
     menuCheck.disabled = true;
+
     setTimeout(() => {
         menuCheck.disabled = false;
-
     }, 1000)
-
-
-
-
-
-
 }
 
 function esconder() {
-    window.removeEventListener('scroll', desactivarScroll);
-    navegacion.style.position = "relative";
     menu.style.animation = "menu2 1s 1";
     encabezado.style.marginTop = "0px";
     menuCheck.checked = false;
@@ -87,7 +79,6 @@ proyectos.addEventListener('click', () => {
             behavior: "smooth"
         })
     }, 1000);
-
 })
 
 habilidades.addEventListener('click', () => {
@@ -97,7 +88,6 @@ habilidades.addEventListener('click', () => {
             behavior: "smooth"
         })
     }, 1000);
-
 })
 
 contacto.addEventListener('click', () => {
@@ -107,7 +97,6 @@ contacto.addEventListener('click', () => {
             behavior: "smooth"
         })
     }, 1000);
-
 })
 
 
@@ -115,13 +104,10 @@ contacto.addEventListener('click', () => {
 
 
 window.onscroll = function() {
-
     var h2 = document.getElementById("sobreMi");
     var string = "Agustín Zigart";
     var str = string.split("");
     console.log(h2.innerHTML);
-
-
 
     if (window.scrollY >= 338 && h2.innerHTML == "") {
         (function animate() {
@@ -129,7 +115,6 @@ window.onscroll = function() {
             var running = setTimeout(animate, 90);
         })();
     }
-
 
     var proyectos = document.getElementById("proyectos");
     var string2 = "Proyectos";
@@ -142,7 +127,6 @@ window.onscroll = function() {
             var running = setTimeout(animate2, 90);
         })();
     }
-
 
     var tecnologias = document.getElementById("habilidades");
     var string3 = "Habilidades";
@@ -165,10 +149,7 @@ window.onscroll = function() {
             var running = setTimeout(animate4, 90);
         })();
     }
-
     console.log("Vertical: " + window.scrollY);
-
-
 };
 
 var botonVuelta = document.getElementById("boton");
