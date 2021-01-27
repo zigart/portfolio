@@ -218,7 +218,7 @@ body {
     align-items: start;
     width: 85%;
     border-radius: 30px;
-    background-color: #ff5858;
+    background-color: #c4fafa;
     box-shadow: 0 0 10px 5px white; }
     .principal .contenedor__contacto a {
       display: flex;
@@ -231,7 +231,7 @@ body {
         height: auto;
         margin: 10px; }
       .principal .contenedor__contacto a p {
-        color: white;
+        color: black;
         font-size: 17px; }
   .principal #boton {
     margin: 100px;
