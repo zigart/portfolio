@@ -156,7 +156,7 @@
             display: flex;
             justify-content: center;
             background-color: #1f1e1c;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             .encabezado__contenedor {
                 display: flex;
@@ -414,10 +414,54 @@
                 }
                 #sobreMi {
                     font-size: 35px;
+                    letter-spacing: 5px;
                 }
                 .principal__foto {
                     width: 250px;
                     height: 250px;
+                }
+                .principal__descripcion {
+                    width: 50%;
+                }
+                #proyectos {
+                    font-size: 35px;
+                    letter-spacing: 5px;
+                }
+                .principal__proyecto {
+                    width: 50%;
+                    height: 500px;
+                    a {
+                        font-size: 30px;
+                    }
+                }
+                #habilidades {
+                    font-size: 30px;
+                    letter-spacing: 5px;
+                }
+                .principal__tecnologias {
+                    width: 50%;
+                }
+                #contacto {
+                    font-size: 30px;
+                    letter-spacing: 5px;
+                }
+                .contenedor__contacto {
+                    display: grid;
+                    grid-template-areas: "email whatsapp" "github github";
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 90px 90px;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    .contacto__email {
+                        grid-area: email;
+                    }
+                    .contacto__whatsapp {
+                        grid-area: whatsapp;
+                    }
+                    .contacto__github {
+                        grid-area: github;
+                    }
                 }
             }
         }

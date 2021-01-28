@@ -119,7 +119,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #1f1e1c;
-  width: 100vw;
+  width: 100%;
   height: 100vh; }
   .encabezado .encabezado__contenedor {
     display: flex;
@@ -331,7 +331,40 @@ body {
     letter-spacing: 10px;
     font-size: 50px; }
   .principal #sobreMi {
-    font-size: 35px; }
+    font-size: 35px;
+    letter-spacing: 5px; }
   .principal .principal__foto {
     width: 250px;
-    height: 250px; } }
+    height: 250px; }
+  .principal .principal__descripcion {
+    width: 50%; }
+  .principal #proyectos {
+    font-size: 35px;
+    letter-spacing: 5px; }
+  .principal .principal__proyecto {
+    width: 50%;
+    height: 500px; }
+    .principal .principal__proyecto a {
+      font-size: 30px; }
+  .principal #habilidades {
+    font-size: 30px;
+    letter-spacing: 5px; }
+  .principal .principal__tecnologias {
+    width: 50%; }
+  .principal #contacto {
+    font-size: 30px;
+    letter-spacing: 5px; }
+  .principal .contenedor__contacto {
+    display: grid;
+    grid-template-areas: "email whatsapp" "github github";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px 90px;
+    justify-content: center;
+    align-items: center;
+    width: 50%; }
+    .principal .contenedor__contacto .contacto__email {
+      grid-area: email; }
+    .principal .contenedor__contacto .contacto__whatsapp {
+      grid-area: whatsapp; }
+    .principal .contenedor__contacto .contacto__github {
+      grid-area: github; } }
