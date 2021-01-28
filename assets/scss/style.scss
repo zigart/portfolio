@@ -135,6 +135,7 @@
                 left: 0;
                 top: 50px;
                 display: none;
+                overflow-y: scroll;
                 a {
                     display: flex;
                     flex-direction: column;
@@ -148,6 +149,9 @@
                     font-size: 30px;
                     text-decoration: none;
                     color: black;
+                }
+                #contactoMenu {
+                    margin-bottom: 90px;
                 }
             }
         }
@@ -370,7 +374,7 @@
             }
         }
         
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             .navegacion {
                 grid-template-columns: 0.3fr 1fr;
                 grid-template-areas: "logo  menuEscritorio";
@@ -463,7 +467,27 @@
                         grid-area: github;
                     }
                 }
+                #boton {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: fixed;
+                    right: 30px;
+                    bottom: 30px;
+                    width: 60px;
+                    height: 60px;
+                    background-color: black;
+                    border: 5px double $rojo;
+                    border-radius: 100%;
+                    animation-name: respiracionAqua2;
+                    animation-iteration-count: infinite;
+                    animation-duration: 4s;
+                    animation-timing-function: ease-in-out;
+                    animation-delay: 0;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
             }
         }
-        
-        @media (min-width: 992px) {}

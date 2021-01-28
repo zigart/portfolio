@@ -84,7 +84,8 @@ body {
     position: absolute;
     left: 0;
     top: 50px;
-    display: none; }
+    display: none;
+    overflow-y: scroll; }
 
 @keyframes menuAnimacion {
   0% {
@@ -114,6 +115,8 @@ body {
       font-size: 30px;
       text-decoration: none;
       color: black; }
+    .navegacion .menu #contactoMenu {
+      margin-bottom: 90px; }
 
 .encabezado {
   display: flex;
@@ -299,7 +302,7 @@ body {
     .encabezado__contenedor #logo {
       font-size: 130px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navegacion {
     grid-template-columns: 0.3fr 1fr;
     grid-template-areas: "logo  menuEscritorio"; }
@@ -367,4 +370,24 @@ body {
     .principal .contenedor__contacto .contacto__whatsapp {
       grid-area: whatsapp; }
     .principal .contenedor__contacto .contacto__github {
-      grid-area: github; } }
+      grid-area: github; }
+  .principal #boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border: 5px double red;
+    border-radius: 100%;
+    animation-name: respiracionAqua2;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0; }
+    .principal #boton img {
+      width: 30px;
+      height: 30px; } }
