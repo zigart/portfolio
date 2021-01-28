@@ -141,54 +141,123 @@ document.querySelector("#contactoMenuDesktop").addEventListener('click', () => {
     }, 0);
 });
 
-window.onscroll = function() {
-    var h2 = document.getElementById("sobreMi");
-    var string = "Agustín Zigart";
-    var str = string.split("");
-    console.log(h2.innerHTML);
 
-    if (window.scrollY >= 338 && h2.innerHTML == "") {
-        (function animate() {
-            str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
-            var running = setTimeout(animate, 90);
-        })();
-    }
 
-    var proyectos = document.getElementById("proyectos");
-    var string2 = "Proyectos";
-    var str2 = string2.split("");
-    console.log(proyectos.innerHTML);
+//escritura de subtitulos
 
-    if (window.scrollY >= 1189 && proyectos.innerHTML == "") {
-        (function animate2() {
-            str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
-            var running = setTimeout(animate2, 90);
-        })();
-    }
+//subtitulo nombre
 
-    var tecnologias = document.getElementById("habilidades");
-    var string3 = "Habilidades";
-    var str3 = string3.split("");
+var h2 = document.getElementById("sobreMi");
+var string = "Agustín Zigart";
+var str = string.split("");
+console.log(h2.innerHTML);
 
-    if (window.scrollY >= 3100 && tecnologias.innerHTML == "") {
-        (function animate3() {
-            str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
-            var running = setTimeout(animate3, 90);
-        })();
-    }
+//subtitulo proyecto
 
-    var contacto = document.getElementById("contacto");
-    var string4 = "Contactame";
-    var str4 = string4.split("");
+var proyectos = document.getElementById("proyectos");
+var string2 = "Proyectos";
+var str2 = string2.split("");
+console.log(proyectos.innerHTML);
 
-    if (window.scrollY >= 4031 && contacto.innerHTML == "") {
-        (function animate4() {
-            str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
-            var running = setTimeout(animate4, 90);
-        })();
-    }
-    console.log("Vertical: " + window.scrollY);
-};
+//subtitulo habilidades
+
+var tecnologias = document.getElementById("habilidades");
+var string3 = "Habilidades";
+var str3 = string3.split("");
+
+//subtitulo contacto
+
+var contacto = document.getElementById("contacto");
+var string4 = "Contactame";
+var str4 = string4.split("");
+
+//adaptacion dependiendo el ancho del dispositivo
+
+if (window.screen.width < 768) {
+    console.log(window.screen.width);
+
+} else if (window.screen.width >= 768 && window.screen.width < 1024) {
+
+    window.onscroll = function() {
+
+
+        if (window.scrollY >= 258 && h2.innerHTML == "") {
+            (function animate() {
+                str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
+                var running = setTimeout(animate, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 1205 && proyectos.innerHTML == "") {
+            (function animate2() {
+                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
+                var running = setTimeout(animate2, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 3548 && tecnologias.innerHTML == "") {
+            (function animate3() {
+                str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
+                var running = setTimeout(animate3, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 4408 && contacto.innerHTML == "") {
+            (function animate4() {
+                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
+                var running = setTimeout(animate4, 90);
+            })();
+        }
+        console.log("Vertical: " + window.scrollY);
+    };
+} else {
+    window.onscroll = function() {
+
+
+        if (window.scrollY >= 300 && h2.innerHTML == "") {
+            (function animate() {
+                str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
+                var running = setTimeout(animate, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 1369 && proyectos.innerHTML == "") {
+            (function animate2() {
+                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
+                var running = setTimeout(animate2, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 3500 && tecnologias.innerHTML == "") {
+            (function animate3() {
+                str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
+                var running = setTimeout(animate3, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 4408 && contacto.innerHTML == "") {
+            (function animate4() {
+                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
+                var running = setTimeout(animate4, 90);
+            })();
+        }
+        console.log("Vertical: " + window.scrollY);
+    };
+}
+
+
 
 var botonVuelta = document.getElementById("boton");
 
