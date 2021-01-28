@@ -179,11 +179,11 @@ body {
     align-items: center;
     width: 80%;
     border-radius: 30px;
-    font-family: 'Alata', sans-serif;
-    text-align: center;
     background-color: #c4fafa;
-    box-shadow: 0 0 10px 5px white; }
+    box-shadow: 0 0 10px 5px white;
+    text-align: center; }
     .principal .principal__descripcion p {
+      font-family: 'Alata', sans-serif;
       padding: 10px;
       line-height: 30px; }
   .principal .principal__proyecto {
@@ -193,8 +193,7 @@ body {
     align-items: center;
     border-radius: 30px;
     overflow: hidden;
-    width: 80%;
-    height: 350px; }
+    width: 80%; }
     .principal .principal__proyecto a {
       color: red;
       text-decoration: none;
@@ -212,9 +211,9 @@ body {
         border-radius: 50px; }
   .principal .principal__tecnologias {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "html css js" "bootstrap sass git";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "html bootstrap" "css sass" "js git";
     justify-items: center;
     align-items: center;
     width: 90%;
