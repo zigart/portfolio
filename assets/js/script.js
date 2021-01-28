@@ -20,8 +20,7 @@ function desplegar() {
 
     body.style.overflowY = "hidden";
 
-    navegacion.style.position = "fixed";
-    navegacion.style.top = "0";
+
 
     menu.style.width = "100vw";
     menu.style.height = "100vh";
