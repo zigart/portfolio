@@ -5,9 +5,9 @@ var menuCheck = document.querySelector("#menu__check");
 var color = document.querySelector("a");
 var menu = document.getElementById("menu");
 var quienSoy = document.getElementById("quienSoyMenu");
-var proyectos = document.getElementById("proyectosMenu");
-var habilidades = document.getElementById("habilidadesMenu");
-var contacto = document.getElementById("contactoMenu");
+var proyectosMenu = document.getElementById("proyectosMenu");
+var habilidadesMenu = document.getElementById("habilidadesMenu");
+var contactoMenu = document.getElementById("contactoMenu");
 var encabezado = document.getElementById("encabezado");
 var body = document.querySelector("body");
 
@@ -69,42 +69,77 @@ menuCheck.addEventListener('click', () => {
 
 
 
+//Menus scrolls
+
+var sobreMi = document.querySelector("#sobreMi");
+var proyectos = document.querySelector("#proyectos");
+var habilidades = document.querySelector("#habilidades");
+var contacto = document.querySelector("#contacto");
+
+function scrollSection(i) {
+    i.scrollIntoView({
+        behavior: "smooth"
+    })
+}
+
+
+//menu celular y tablets
 
 quienSoy.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        document.querySelector("#sobreMi").scrollIntoView({
-            behavior: "smooth"
-        })
+        scrollSection(sobreMi);
     }, 1000);
-})
+});
 
-proyectos.addEventListener('click', () => {
+proyectosMenu.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        document.querySelector("#proyectos").scrollIntoView({
-            behavior: "smooth"
-        })
+        scrollSection(proyectos);
     }, 1000);
-})
+});
 
-habilidades.addEventListener('click', () => {
+habilidadesMenu.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        document.querySelector("#habilidades").scrollIntoView({
-            behavior: "smooth"
-        })
+        scrollSection(habilidades);
     }, 1000);
-})
+});
 
-contacto.addEventListener('click', () => {
+contactoMenu.addEventListener('click', () => {
     esconder();
     setTimeout(() => {
-        document.querySelector("#contacto").scrollIntoView({
-            behavior: "smooth"
-        })
+        scrollSection(contacto);
     }, 1000);
-})
+});
+
+//Menu escritorio
+
+
+
+document.querySelector("#quienSoyMenuDesktop").addEventListener('click', () => {
+    setTimeout(() => {
+        scrollSection(sobreMi);
+    }, 0);
+});
+
+document.querySelector("#proyectosMenuDesktop").addEventListener('click', () => {
+    setTimeout(() => {
+        scrollSection(proyectos);
+    }, 0);
+});
+
+document.querySelector("#habilidadesMenuDesktop").addEventListener('click', () => {
+    setTimeout(() => {
+        scrollSection(habilidades);
+    }, 0);
+});
+
+document.querySelector("#contactoMenuDesktop").addEventListener('click', () => {
+    setTimeout(() => {
+        scrollSection(contacto);
+    }, 0);
+});
 
 window.onscroll = function() {
     var h2 = document.getElementById("sobreMi");
