@@ -352,7 +352,7 @@ body {
         letter-spacing: 2px; }
         .navegacion .menu__desktop a:hover {
           color: red;
-          transition: 1s; }
+          transition: 0.5s; }
   .encabezado .encabezado__contenedor {
     width: 300px;
     height: 300px;
