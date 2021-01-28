@@ -174,6 +174,44 @@ var str4 = string4.split("");
 //adaptacion dependiendo el ancho del dispositivo
 
 if (window.screen.width < 768) {
+    window.onscroll = function() {
+
+
+        if (window.scrollY >= 268 && h2.innerHTML == "") {
+            (function animate() {
+                str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
+                var running = setTimeout(animate, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 1445 && proyectos.innerHTML == "") {
+            (function animate2() {
+                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
+                var running = setTimeout(animate2, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 3033 && tecnologias.innerHTML == "") {
+            (function animate3() {
+                str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
+                var running = setTimeout(animate3, 90);
+            })();
+        }
+
+
+
+        if (window.scrollY >= 3900 && contacto.innerHTML == "") {
+            (function animate4() {
+                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
+                var running = setTimeout(animate4, 90);
+            })();
+        }
+        console.log("Vertical: " + window.scrollY);
+    };
     console.log(window.screen.width);
 
 } else if (window.screen.width >= 768 && window.screen.width < 1024) {
