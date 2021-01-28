@@ -30,6 +30,22 @@ body {
   100% {
     box-shadow: 0 0 40px 15px red; } }
 
+@keyframes desaparecer {
+  0% { }
+  98% {
+    width: 0px;
+    height: 0px; }
+  100% {
+    display: none; } }
+
+@keyframes nombreYapellido {
+  0% {
+    opacity: 0;
+    font-size: 0; }
+  100% {
+    opacity: 1;
+    font-size: 100px; } }
+
 .navegacion {
   display: grid;
   top: 0;
@@ -103,7 +119,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #1f1e1c;
-  width: 100%;
+  width: 100vw;
   height: 100vh; }
   .encabezado .encabezado__contenedor {
     display: flex;
@@ -121,7 +137,7 @@ body {
     color: white; }
     .encabezado .encabezado__contenedor #nombre,
     .encabezado .encabezado__contenedor #apellido {
-      font-size: 100px;
+      font-size: 1px;
       display: none; }
     .encabezado .encabezado__contenedor #logo {
       color: aqua;
@@ -304,17 +320,18 @@ body {
         margin: 0 15px 0 15px;
         font-family: 'Alata', sans-serif;
         letter-spacing: 2px; }
-  .encabezado__contenedor {
+  .encabezado .encabezado__contenedor {
+    width: 300px;
+    height: 300px;
+    border: 15px double red; }
+    .encabezado .encabezado__contenedor #logo {
+      font-size: 190px; }
+  .principal #quienSoy {
+    margin-top: 20px;
+    letter-spacing: 10px;
+    font-size: 50px; }
+  .principal #sobreMi {
+    font-size: 35px; }
+  .principal .principal__foto {
     width: 250px;
-    height: 250px; }
-    .encabezado__contenedor #logo {
-      font-size: 150px; }
-    .encabezado__contenedor:hover {
-      display: flex;
-      flex-direction: column; }
-      .encabezado__contenedor:hover #logo {
-        display: none; }
-      .encabezado__contenedor:hover #nombre {
-        display: block; }
-      .encabezado__contenedor:hover #apellido {
-        display: block; } }
+    height: 250px; } }

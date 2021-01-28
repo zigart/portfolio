@@ -49,6 +49,28 @@
             }
         }
         
+        @keyframes desaparecer {
+            0% {}
+            98% {
+                width: 0px;
+                height: 0px;
+            }
+            100% {
+                display: none;
+            }
+        }
+        
+        @keyframes nombreYapellido {
+            0% {
+                opacity: 0;
+                font-size: 0;
+            }
+            100% {
+                opacity: 1;
+                font-size: 100px;
+            }
+        }
+        
         .navegacion {
             display: grid;
             top: 0;
@@ -134,7 +156,7 @@
             display: flex;
             justify-content: center;
             background-color: #1f1e1c;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
             .encabezado__contenedor {
                 display: flex;
@@ -152,7 +174,7 @@
                 color: white;
                 #nombre,
                 #apellido {
-                    font-size: 100px;
+                    font-size: 1px;
                     display: none;
                 }
                 #logo {
@@ -374,24 +396,28 @@
                     }
                 }
             }
-            .encabezado__contenedor {
-                width: 250px;
-                height: 250px;
-                #logo {
-                    font-size: 150px;
-                }
-                &:hover {
-                    display: flex;
-                    flex-direction: column;
+            .encabezado {
+                .encabezado__contenedor {
+                    width: 300px;
+                    height: 300px;
+                    border: 15px double $rojo;
                     #logo {
-                        display: none;
+                        font-size: 190px;
                     }
-                    #nombre {
-                        display: block;
-                    }
-                    #apellido {
-                        display: block;
-                    }
+                }
+            }
+            .principal {
+                #quienSoy {
+                    margin-top: 20px;
+                    letter-spacing: 10px;
+                    font-size: 50px;
+                }
+                #sobreMi {
+                    font-size: 35px;
+                }
+                .principal__foto {
+                    width: 250px;
+                    height: 250px;
                 }
             }
         }
