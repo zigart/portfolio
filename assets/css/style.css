@@ -178,12 +178,14 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 200px;
     border-radius: 30px;
     font-family: 'Alata', sans-serif;
     text-align: center;
     background-color: #c4fafa;
     box-shadow: 0 0 10px 5px white; }
+    .principal .principal__descripcion p {
+      padding: 10px;
+      line-height: 30px; }
   .principal .principal__proyecto {
     display: flex;
     flex-direction: column;
