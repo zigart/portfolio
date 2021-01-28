@@ -304,7 +304,29 @@ body {
     width: 220px;
     height: 220px; }
     .encabezado__contenedor #logo {
-      font-size: 130px; } }
+      font-size: 130px; }
+  .principal .principal__descripcion {
+    font-size: 18px;
+    line-height: 10px; }
+  .principal .principal__tecnologias {
+    width: 80%;
+    grid-template-areas: "html css js" "bootstrap sass git";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+  .principal .contenedor__contacto {
+    display: grid;
+    grid-template-areas: "email whatsapp" "github github";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px 90px;
+    justify-content: center;
+    align-items: center;
+    width: 80%; }
+    .principal .contenedor__contacto .contacto__email {
+      grid-area: email; }
+    .principal .contenedor__contacto .contacto__whatsapp {
+      grid-area: whatsapp; }
+    .principal .contenedor__contacto .contacto__github {
+      grid-area: github; } }
 
 @media (min-width: 1024px) {
   .navegacion {
@@ -342,7 +364,7 @@ body {
     letter-spacing: 10px;
     font-size: 45px; }
   .principal #sobreMi {
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: 5px; }
   .principal .principal__foto {
     width: 250px;
@@ -362,23 +384,11 @@ body {
     letter-spacing: 5px; }
   .principal .principal__tecnologias {
     width: 50%; }
+  .principal .contenedor__contacto {
+    width: 50%; }
   .principal #contacto {
     font-size: 35px;
     letter-spacing: 5px; }
-  .principal .contenedor__contacto {
-    display: grid;
-    grid-template-areas: "email whatsapp" "github github";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 90px 90px;
-    justify-content: center;
-    align-items: center;
-    width: 50%; }
-    .principal .contenedor__contacto .contacto__email {
-      grid-area: email; }
-    .principal .contenedor__contacto .contacto__whatsapp {
-      grid-area: whatsapp; }
-    .principal .contenedor__contacto .contacto__github {
-      grid-area: github; }
   .principal #boton {
     display: flex;
     justify-content: center;

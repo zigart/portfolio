@@ -378,6 +378,36 @@
                     font-size: 130px;
                 }
             }
+            .principal {
+                .principal__descripcion {
+                    font-size: 18px;
+                    line-height: 10px;
+                }
+                .principal__tecnologias {
+                    width: 80%;
+                    grid-template-areas: "html css js" "bootstrap sass git";
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                }
+                .contenedor__contacto {
+                    display: grid;
+                    grid-template-areas: "email whatsapp" "github github";
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 90px 90px;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+                    .contacto__email {
+                        grid-area: email;
+                    }
+                    .contacto__whatsapp {
+                        grid-area: whatsapp;
+                    }
+                    .contacto__github {
+                        grid-area: github;
+                    }
+                }
+            }
         }
         
         @media (min-width: 1024px) {
@@ -428,7 +458,7 @@
                     font-size: 45px;
                 }
                 #sobreMi {
-                    font-size: 35px;
+                    font-size: 40px;
                     letter-spacing: 5px;
                 }
                 .principal__foto {
@@ -456,27 +486,12 @@
                 .principal__tecnologias {
                     width: 50%;
                 }
+                .contenedor__contacto {
+                    width: 50%;
+                }
                 #contacto {
                     font-size: 35px;
                     letter-spacing: 5px;
-                }
-                .contenedor__contacto {
-                    display: grid;
-                    grid-template-areas: "email whatsapp" "github github";
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 90px 90px;
-                    justify-content: center;
-                    align-items: center;
-                    width: 50%;
-                    .contacto__email {
-                        grid-area: email;
-                    }
-                    .contacto__whatsapp {
-                        grid-area: whatsapp;
-                    }
-                    .contacto__github {
-                        grid-area: github;
-                    }
                 }
                 #boton {
                     display: flex;
