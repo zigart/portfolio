@@ -329,7 +329,7 @@ body {
   .principal #quienSoy {
     margin-top: 20px;
     letter-spacing: 10px;
-    font-size: 50px; }
+    font-size: 45px; }
   .principal #sobreMi {
     font-size: 35px;
     letter-spacing: 5px; }
@@ -347,12 +347,12 @@ body {
     .principal .principal__proyecto a {
       font-size: 30px; }
   .principal #habilidades {
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: 5px; }
   .principal .principal__tecnologias {
     width: 50%; }
   .principal #contacto {
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: 5px; }
   .principal .contenedor__contacto {
     display: grid;
