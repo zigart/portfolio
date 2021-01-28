@@ -242,7 +242,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    width: 85%;
+    width: 90%;
     border-radius: 30px;
     background-color: #c4fafa;
     box-shadow: 0 0 10px 5px white;
@@ -259,7 +259,10 @@ body {
         margin: 10px; }
       .principal .contenedor__contacto a p {
         color: black;
-        font-size: 17px; }
+        font-size: 17px;
+        word-wrap: break-word; }
+      .principal .contenedor__contacto a #correo {
+        word-break: break-all; }
   .principal #boton {
     display: flex;
     justify-content: center;

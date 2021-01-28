@@ -301,7 +301,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: start;
-                width: 85%;
+                width: 90%;
                 border-radius: 30px;
                 background-color: rgb(196, 250, 250);
                 box-shadow: 0 0 10px 5px white;
@@ -320,6 +320,10 @@
                     p {
                         color: black;
                         font-size: 17px;
+                        word-wrap: break-word;
+                    }
+                    #correo {
+                        word-break: break-all;
                     }
                 }
             }
