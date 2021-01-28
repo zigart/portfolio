@@ -200,11 +200,11 @@ body {
       font-size: 28px;
       letter-spacing: 3px;
       margin: 20px 0 20px 0; }
-    .principal .principal__proyecto #link {
+    .principal .principal__proyecto .link {
       width: 100%;
       height: 80%;
       border-radius: 50px; }
-      .principal .principal__proyecto #link img {
+      .principal .principal__proyecto .link img {
         width: 100%;
         height: 100%;
         border-radius: 50px; }
