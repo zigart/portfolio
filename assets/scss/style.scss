@@ -381,6 +381,7 @@
                 #logoNav {
                     justify-self: start;
                     margin-left: 20px;
+                    color: $rojo;
                 }
                 .navegacion__icono,
                 .menu {
@@ -392,11 +393,15 @@
                     grid-area: menuEscritorio;
                     justify-self: end;
                     a {
-                        color: $rojo;
+                        color: $aqua;
                         text-decoration: none;
                         margin: 0 15px 0 15px;
                         font-family: 'Alata', sans-serif;
                         letter-spacing: 2px;
+                        &:hover {
+                            color: $rojo;
+                            transition: 1s;
+                        }
                     }
                 }
             }

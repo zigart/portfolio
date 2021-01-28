@@ -308,7 +308,8 @@ body {
     grid-template-areas: "logo  menuEscritorio"; }
     .navegacion #logoNav {
       justify-self: start;
-      margin-left: 20px; }
+      margin-left: 20px;
+      color: red; }
     .navegacion .navegacion__icono,
     .navegacion .menu {
       display: none; }
@@ -318,11 +319,14 @@ body {
       grid-area: menuEscritorio;
       justify-self: end; }
       .navegacion .menu__desktop a {
-        color: red;
+        color: aqua;
         text-decoration: none;
         margin: 0 15px 0 15px;
         font-family: 'Alata', sans-serif;
         letter-spacing: 2px; }
+        .navegacion .menu__desktop a:hover {
+          color: red;
+          transition: 1s; }
   .encabezado .encabezado__contenedor {
     width: 300px;
     height: 300px;
