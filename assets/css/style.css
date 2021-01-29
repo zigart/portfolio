@@ -115,6 +115,8 @@ body {
       font-size: 30px;
       text-decoration: none;
       color: black; }
+      .navegacion .menu a:hover {
+        cursor: pointer; }
     .navegacion .menu #contactoMenu {
       margin-bottom: 90px; }
 

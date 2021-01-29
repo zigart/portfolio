@@ -149,6 +149,9 @@
                     font-size: 30px;
                     text-decoration: none;
                     color: black;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
                 #contactoMenu {
                     margin-bottom: 90px;
