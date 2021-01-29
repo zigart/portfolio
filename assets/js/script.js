@@ -118,6 +118,7 @@ contactoMenu.addEventListener('click', () => {
 
 
 document.querySelector("#quienSoyMenuDesktop").addEventListener('click', () => {
+    console.log("click");
     setTimeout(() => {
         scrollSection(sobreMi);
     }, 0);
@@ -212,7 +213,7 @@ if (window.screen.width < 768) {
         }
         console.log("Vertical: " + window.scrollY);
     };
-    console.log(window.screen.width);
+
 
 } else if (window.screen.width >= 768 && window.screen.width < 1024) {
 
@@ -252,7 +253,7 @@ if (window.screen.width < 768) {
                 var running = setTimeout(animate4, 90);
             })();
         }
-        console.log("Vertical: " + window.scrollY);
+
     };
 } else {
     window.onscroll = function() {
@@ -291,7 +292,7 @@ if (window.screen.width < 768) {
                 var running = setTimeout(animate4, 90);
             })();
         }
-        console.log("Vertical: " + window.scrollY);
+
     };
 }
 

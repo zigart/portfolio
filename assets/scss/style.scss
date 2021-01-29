@@ -435,6 +435,7 @@
                         font-family: 'Alata', sans-serif;
                         letter-spacing: 2px;
                         &:hover {
+                            cursor: pointer;
                             color: $rojo;
                             transition: 0.5s;
                         }
