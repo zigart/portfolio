@@ -1,15 +1,15 @@
 'use strict'
 
-var navegacion = document.querySelector(".navegacion");
-var menuCheck = document.querySelector("#menu__check");
-var color = document.querySelector("a");
-var menu = document.getElementById("menu");
-var quienSoy = document.getElementById("quienSoyMenu");
-var proyectosMenu = document.getElementById("proyectosMenu");
-var habilidadesMenu = document.getElementById("habilidadesMenu");
-var contactoMenu = document.getElementById("contactoMenu");
-var encabezado = document.getElementById("encabezado");
-var body = document.querySelector("body");
+const navegacion = document.querySelector(".navegacion");
+const menuCheck = document.querySelector("#menu__check");
+const color = document.querySelector("a");
+const menu = document.getElementById("menu");
+const quienSoy = document.getElementById("quienSoyMenu");
+const proyectosMenu = document.getElementById("proyectosMenu");
+const habilidadesMenu = document.getElementById("habilidadesMenu");
+const contactoMenu = document.getElementById("contactoMenu");
+const encabezado = document.getElementById("encabezado");
+const body = document.querySelector("body");
 
 
 
@@ -20,8 +20,6 @@ function desplegar() {
 
     body.style.overflowY = "hidden";
 
-
-
     menu.style.width = "100vw";
     menu.style.height = "100vh";
     menu.style.display = "block";
@@ -30,37 +28,38 @@ function desplegar() {
     menuCheck.checked = true;
     menuCheck.disabled = true;
 
-
-
-
-
     setTimeout(() => {
+
         menuCheck.disabled = false;
+
     }, 1000)
 }
 
 function esconder() {
+
     body.style.overflowY = "visible";
+
     menu.style.animation = "menu2 1s 1";
 
 
     menuCheck.checked = false;
     menuCheck.disabled = true;
     setTimeout(() => {
+
         menuCheck.disabled = false;
         menu.style.display = "none";
+
     }, 1000);
-    console.log("aca se esconde");
+
 }
 
 
 
 
-//Despliegue y repliegue del menu
+//Evento de despliegue y repliegue del menu
 
 menuCheck.addEventListener('click', () => {
     if (menuCheck.checked == true) {
-        console.log("falta la funcion");
         desplegar();
     } else if (menuCheck.checked == false && menu.style.display == "block") {
         esconder();
@@ -71,10 +70,10 @@ menuCheck.addEventListener('click', () => {
 
 //Menus scrolls
 
-var sobreMi = document.querySelector("#sobreMi");
-var proyectos = document.querySelector("#proyectos");
-var habilidades = document.querySelector("#habilidades");
-var contacto = document.querySelector("#contacto");
+const sobreMi = document.querySelector("#sobreMi");
+const proyectos = document.querySelector("#proyectos");
+const habilidades = document.querySelector("#habilidades");
+const contacto = document.querySelector("#contacto");
 
 function scrollSection(i) {
     i.scrollIntoView({
@@ -148,27 +147,27 @@ document.querySelector("#contactoMenuDesktop").addEventListener('click', () => {
 
 //subtitulo nombre
 
-var h2 = document.getElementById("sobreMi");
+
 var string = "Agustín Zigart";
 var str = string.split("");
-console.log(h2.innerHTML);
+
 
 //subtitulo proyecto
 
-var proyectos = document.getElementById("proyectos");
+
 var string2 = "Proyectos";
 var str2 = string2.split("");
-console.log(proyectos.innerHTML);
+
 
 //subtitulo habilidades
 
-var tecnologias = document.getElementById("habilidades");
+
 var string3 = "Habilidades";
 var str3 = string3.split("");
 
 //subtitulo contacto
 
-var contacto = document.getElementById("contacto");
+
 var string4 = "Contactame";
 var str4 = string4.split("");
 
@@ -178,9 +177,9 @@ if (window.screen.width < 768) {
     window.onscroll = function() {
 
 
-        if (window.scrollY >= 268 && h2.innerHTML == "") {
+        if (window.scrollY >= 268 && sobreMi.innerHTML == "") {
             (function animate() {
-                str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
+                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
                 var running = setTimeout(animate, 90);
             })();
         }
@@ -196,9 +195,9 @@ if (window.screen.width < 768) {
 
 
 
-        if (window.scrollY >= 3033 && tecnologias.innerHTML == "") {
+        if (window.scrollY >= 3033 && habilidades.innerHTML == "") {
             (function animate3() {
-                str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
+                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
                 var running = setTimeout(animate3, 90);
             })();
         }
@@ -211,7 +210,7 @@ if (window.screen.width < 768) {
                 var running = setTimeout(animate4, 90);
             })();
         }
-        console.log("Vertical: " + window.scrollY);
+
     };
 
 
@@ -220,9 +219,9 @@ if (window.screen.width < 768) {
     window.onscroll = function() {
 
 
-        if (window.scrollY >= 258 && h2.innerHTML == "") {
+        if (window.scrollY >= 258 && sobreMi.innerHTML == "") {
             (function animate() {
-                str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
+                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
                 var running = setTimeout(animate, 90);
             })();
         }
@@ -238,9 +237,9 @@ if (window.screen.width < 768) {
 
 
 
-        if (window.scrollY >= 3548 && tecnologias.innerHTML == "") {
+        if (window.scrollY >= 3548 && habilidades.innerHTML == "") {
             (function animate3() {
-                str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
+                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
                 var running = setTimeout(animate3, 90);
             })();
         }
@@ -259,9 +258,9 @@ if (window.screen.width < 768) {
     window.onscroll = function() {
 
 
-        if (window.scrollY >= 300 && h2.innerHTML == "") {
+        if (window.scrollY >= 300 && sobreMi.innerHTML == "") {
             (function animate() {
-                str.length > 0 ? h2.innerHTML += str.shift() : clearTimeout(running);
+                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
                 var running = setTimeout(animate, 90);
             })();
         }
@@ -277,9 +276,9 @@ if (window.screen.width < 768) {
 
 
 
-        if (window.scrollY >= 3500 && tecnologias.innerHTML == "") {
+        if (window.scrollY >= 3500 && habilidades.innerHTML == "") {
             (function animate3() {
-                str3.length > 0 ? tecnologias.innerHTML += str3.shift() : clearTimeout(running);
+                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
                 var running = setTimeout(animate3, 90);
             })();
         }
