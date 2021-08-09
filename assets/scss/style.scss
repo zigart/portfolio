@@ -163,6 +163,8 @@
             display: flex;
             justify-content: center;
             background-color: #1f1e1c;
+          
+            background: repeating-radial-gradient( -45deg, #000 0px, #000 5px, #333 6px, #333 11px, #000 12px);
             width: 100%;
             height: 100vh;
             .encabezado__contenedor {
@@ -421,6 +423,7 @@
                     justify-self: start;
                     margin-left: 20px;
                     color: $rojo;
+                    margin-left: 25%;
                 }
                 .navegacion__icono,
                 .menu {
@@ -431,6 +434,7 @@
                     flex-direction: row;
                     grid-area: menuEscritorio;
                     justify-self: end;
+                    margin-right: 2%;
                     a {
                         color: $aqua;
                         text-decoration: none;

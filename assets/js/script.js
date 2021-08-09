@@ -1,5 +1,4 @@
 'use strict'
-
 const navegacion = document.querySelector(".navegacion");
 const menuCheck = document.querySelector("#menu__check");
 const color = document.querySelector("a");
@@ -148,156 +147,80 @@ document.querySelector("#contactoMenuDesktop").addEventListener('click', () => {
 //subtitulo nombre
 
 
-var string = "Agustín Zigart";
-var str = string.split("");
+let string = "Agustín Zigart" 
+let str = string.split("");
 
 
 //subtitulo proyecto
 
 
-var string2 = "Proyectos";
-var str2 = string2.split("");
+let string2 = "Proyectos";
+let str2 = string2.split("");
 
 
 //subtitulo habilidades
 
 
-var string3 = "Habilidades";
-var str3 = string3.split("");
+let string3 = "Habilidades";
+let str3 = string3.split("");
 
 //subtitulo contacto
 
 
-var string4 = "Contactame";
-var str4 = string4.split("");
+let string4 = "Contactame";
+let str4 = string4.split("");
 
 //adaptacion dependiendo el ancho del dispositivo
 
-if (window.screen.width < 768) {
-    window.onscroll = function() {
-
-
-        if (window.scrollY >= 268 && sobreMi.innerHTML == "") {
-            (function animate() {
-                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
-                var running = setTimeout(animate, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 1445 && proyectos.innerHTML == "") {
-            (function animate2() {
-                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
-                var running = setTimeout(animate2, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 3033 && habilidades.innerHTML == "") {
-            (function animate3() {
-                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
-                var running = setTimeout(animate3, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 3900 && contacto.innerHTML == "") {
-            (function animate4() {
-                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
-                var running = setTimeout(animate4, 90);
-            })();
-        }
-
-    };
-
-
-} else if (window.screen.width >= 768 && window.screen.width < 1024) {
-
-    window.onscroll = function() {
-
-
-        if (window.scrollY >= 258 && sobreMi.innerHTML == "") {
-            (function animate() {
-                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
-                var running = setTimeout(animate, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 1205 && proyectos.innerHTML == "") {
-            (function animate2() {
-                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
-                var running = setTimeout(animate2, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 3548 && habilidades.innerHTML == "") {
-            (function animate3() {
-                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
-                var running = setTimeout(animate3, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 4408 && contacto.innerHTML == "") {
-            (function animate4() {
-                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
-                var running = setTimeout(animate4, 90);
-            })();
-        }
-
-    };
-} else {
-    window.onscroll = function() {
-
-
-        if (window.scrollY >= 300 && sobreMi.innerHTML == "") {
-            (function animate() {
-                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
-                var running = setTimeout(animate, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 1369 && proyectos.innerHTML == "") {
-            (function animate2() {
-                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
-                var running = setTimeout(animate2, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 3500 && habilidades.innerHTML == "") {
-            (function animate3() {
-                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
-                var running = setTimeout(animate3, 90);
-            })();
-        }
-
-
-
-        if (window.scrollY >= 4408 && contacto.innerHTML == "") {
-            (function animate4() {
-                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
-                var running = setTimeout(animate4, 90);
-            })();
-        }
-
-    };
+function react(section){
+    let getYposition = section.getBoundingClientRect().y;
+    return getYposition - window.innerHeight;
 }
 
 
+    window.onscroll = function() {
+        console.log(sobreMi.getBoundingClientRect().y - window.innerHeight);
+        if (react(sobreMi) < 0 && sobreMi.innerHTML == "") {
+            (function animate() {
+                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
+                let running = setTimeout(animate, 90);
+            })();
+        }
 
-var botonVuelta = document.getElementById("boton");
+
+
+        if (react(proyectos) < 0&& proyectos.innerHTML == "") {
+            (function animate2() {
+                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
+                let running = setTimeout(animate2, 90);
+            })();
+        }
+
+
+
+        if (react(habilidades) < 0 && habilidades.innerHTML == "") {
+            (function animate3() {
+                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
+                let running = setTimeout(animate3, 90);
+            })();
+        }
+
+
+
+        if (react(contacto) < 0 && contacto.innerHTML == "") {
+            (function animate4() {
+                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
+                let running = setTimeout(animate4, 90);
+            })();
+        }
+
+    };
+
+
+
+
+
+let botonVuelta = document.getElementById("boton");
 
 botonVuelta.addEventListener("click", () => {
     window.scroll({
