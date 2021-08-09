@@ -180,9 +180,9 @@ function react(section){
 
     window.onscroll = function() {
         if (react(sobreMi) < 0 && sobreMi.innerHTML == "") {
-            (function animate() {
-                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
+            (async function animate() {
                 let running = setTimeout(animate, 90);
+                str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
             })();
         }
 
@@ -190,8 +190,8 @@ function react(section){
 
         if (react(proyectos) < 0&& proyectos.innerHTML == "") {
             (function animate2() {
-                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
                 let running = setTimeout(animate2, 90);
+                str2.length > 0 ? proyectos.innerHTML += str2.shift() : clearTimeout(running);
             })();
         }
 
@@ -199,8 +199,8 @@ function react(section){
 
         if (react(habilidades) < 0 && habilidades.innerHTML == "") {
             (function animate3() {
-                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
                 let running = setTimeout(animate3, 90);
+                str3.length > 0 ? habilidades.innerHTML += str3.shift() : clearTimeout(running);
             })();
         }
 
@@ -208,8 +208,8 @@ function react(section){
 
         if (react(contacto) < 0 && contacto.innerHTML == "") {
             (function animate4() {
-                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
                 let running = setTimeout(animate4, 90);
+                str4.length > 0 ? contacto.innerHTML += str4.shift() : clearTimeout(running);
             })();
         }
 
