@@ -179,7 +179,6 @@ function react(section){
 
 
     window.onscroll = function() {
-        console.log(sobreMi.getBoundingClientRect().y - window.innerHeight);
         if (react(sobreMi) < 0 && sobreMi.innerHTML == "") {
             (function animate() {
                 str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
