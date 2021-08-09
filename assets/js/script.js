@@ -180,7 +180,7 @@ function react(section){
 
     window.onscroll = function() {
         if (react(sobreMi) < 0 && sobreMi.innerHTML == "") {
-            (async function animate() {
+            (function animate() {
                 let running = setTimeout(animate, 90);
                 str.length > 0 ? sobreMi.innerHTML += str.shift() : clearTimeout(running);
             })();
